@@ -1,7 +1,7 @@
-function LoginPage(){
-    return (
+function Login(){
+    return(
         <div className="main-wrapper login">
-  <section className="login-section">
+<section className="login-section">
     <h2>Choose your user!</h2>
     <ul>
       <li>
@@ -45,7 +45,7 @@ function LoginPage(){
       </li>
     </ul>
   </section>
-</div>
+  </div>
     )
 }
-export default LoginPage
+export default Login
