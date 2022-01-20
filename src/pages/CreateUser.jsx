@@ -3,9 +3,9 @@ import { useEffect } from "react/cjs/react.development";
 
 function CreateUser(props) {
   // create state
-  function createUser(firstName, lastName , phoneNumber){
+  function addUser(firstName, lastName , phoneNumber){
 
-    useEffect(() => {
+    // useEffect(() => {
       fetch(`http://localhost:4000/users`, {
         method: 'POST',
         headers: {
@@ -19,7 +19,7 @@ function CreateUser(props) {
         })
       }).then(resp=> resp.json())
       
-    }, [])
+    // }, [])
     
   }
 
