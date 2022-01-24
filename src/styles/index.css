@@ -231,6 +231,42 @@ textarea:focus {
   grid-template-columns: 1fr auto;
 }
 
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #00000040;
+  display: grid;
+  place-items: center;
+
+  z-index: 15;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+
+  position: relative;
+}
+
+.modal .close-modal {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  border: solid 2px green;
+  border-radius: 50%;
+  background-color: var(--background-stripe);
+  color: white;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+}
 @media screen and (min-width: 1440px) {
   #root {
     padding-top: 2.5vh;

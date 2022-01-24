@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { useEffect } from "react/cjs/react.development";
+import Modal from "./components/Modal";
 import CreateUser from "./pages/CreateUser";
 
 import Login from "./pages/Login";
@@ -64,32 +65,20 @@ export default function App() {
               currentUser={currentUser}
               logOut={logOut}
               users={users}
+              
+              modal={modal}
             />
           }
         />
         <Route
           path="/logged-in/:conversationId"
-          element={<Main currentUser={currentUser} logOut={logOut} users={users}/>}
+          element={<Main modal={modal} currentUser={currentUser} logOut={logOut} users={users} setModal={setModal}/>}
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 
 
-      {/* {modal === 'new-user' ? (
-        <div className='modal-wrapper'>
-          <div className='modal'>
-            <h1>New user modal</h1>
-          </div>
-        </div>
-      ) : null}
-
-      {modal === 'something-else' ? (
-        <div className='modal-wrapper'>
-          <div className='modal'>
-            <h1>Something else</h1>
-          </div>
-        </div>
-      ) : null} */}
+      {/* <Modal modal={modal} setModal={setModal}/> */}
     </div>
   );
 }
