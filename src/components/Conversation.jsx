@@ -1,4 +1,4 @@
-import { text } from "node:stream/consumers";
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Message from "./Message";
@@ -7,10 +7,10 @@ function Conversation({ currentUser }) {
   const [currentConversation, setCurrentConversation] = useState(null);
   const params = useParams();
 
-  function createMessage() {
+  function createMessage(text) {
     //create mesaage on the server
 
-    fetch("http://localhost:4000/messages", {
+    return fetch("http://localhost:4000/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,11 +22,12 @@ function Conversation({ currentUser }) {
       }),
     }).then((resp) => resp.json())
     .then( newMessage => {
+      //update the conversation state
       const currentConversationCopy = JSON.parse(JSON.stringify(currentConversation))
-      currentConversation.messages.push(newMessage)
+      currentConversationCopy.messages.push(newMessage)
       setCurrentConversation(currentConversationCopy)
     });
-    //update the conversation state
+
   }
 
   useEffect(() => {
@@ -50,6 +51,7 @@ function Conversation({ currentUser }) {
             key={message.id}
             message={message}
             currentUser={currentUser}
+
             // outgoing={message.userId === currentUser.id}
           />
         ))}

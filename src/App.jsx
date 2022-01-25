@@ -65,14 +65,20 @@ export default function App() {
               currentUser={currentUser}
               logOut={logOut}
               users={users}
-              
+              setModal={setModal}
               modal={modal}
             />
           }
         />
         <Route
           path="/logged-in/:conversationId"
-          element={<Main modal={modal} currentUser={currentUser} logOut={logOut} users={users} setModal={setModal}/>}
+          element={<Main
+             modal={modal} 
+             currentUser={currentUser} 
+             logOut={logOut} 
+             users={users} 
+             setModal={setModal}
+             conversation={conversation}/>}
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import UserLoginItem from "../components/UserLoginItem";
 
-function Login({users, logIn, setModals}) {
+function Login({users, logIn, setModal}) {
   return (
     <div className="main-wrapper login">
       <section className="login-section">

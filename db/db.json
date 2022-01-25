@@ -48,8 +48,37 @@
       "messageText": "How are you? 👋 ",
       "conversationId": 3,
       "id": 2
+    },
+    {
+      "userId": 1,
+      "messageText": "hello",
+      "conversationId": 1,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "messageText": "he",
+      "conversationId": 1,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "messageText": "hello",
+      "conversationId": 1,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "messageText": "arita",
+      "conversationId": 1,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "messageText": "hello",
+      "conversationId": 1,
+      "id": 7
     }
-
   ],
   "conversations": [
     {

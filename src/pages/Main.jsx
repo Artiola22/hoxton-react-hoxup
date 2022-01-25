@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Conversation from "../components/Conversation";
 
-function Main({ currentUser, logOut, users, setModal, modal }) {
+function Main({ currentUser, logOut, users, setModal, modal, conversation }) {
   const [conversations, setConversations] = useState([]);
 
   const params = useParams();
